@@ -18,6 +18,9 @@ public class SecretariaDaFazenda {
 		for (Contribuinte c: lista) {
 			System.out.println(c);
 			System.out.println(c.getNome()+" - Imposto Devido R$ "+String.format("%.2f", c.calcularImposto()));
+			System.out.println();
 		}
+		
+		
 	}
 }

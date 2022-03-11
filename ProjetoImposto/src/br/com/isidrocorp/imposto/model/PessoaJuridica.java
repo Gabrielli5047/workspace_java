@@ -1,6 +1,8 @@
 package br.com.isidrocorp.imposto.model;
 
-public class PessoaJuridica extends Contribuinte {
+import br.com.isidrocorp.imposto.userinterface.sistemaSeguranca;
+
+public class PessoaJuridica extends Contribuinte  implements sistemaSeguranca{
 	private String cnpj;
 	private double faturamento;
 	
@@ -19,24 +21,24 @@ public class PessoaJuridica extends Contribuinte {
 
 
 	@Override
-	public double calcularImposto() {
-//		double imposto;
-//		if (faturamento < 100000) {
-//			imposto = 0.0;
-//		}
-//		else if (faturamento < 250000) {
-//			imposto = faturamento * 0.06;
-//		}
-//		else if (faturamento < 450000) {
-//			imposto = faturamento * 0.15;
-//		}
-//		else {
-//			imposto = faturamento * 0.25;
-//		}
-//		return imposto;
+	public double calcularImposto(){
+		double imposto;
+		if (faturamento < 100000) {
+			imposto = 0.0;
+		}
+		else if (faturamento < 250000) {
+			imposto = faturamento * 0.06;
+		}
+		else if (faturamento < 450000) {
+			imposto = faturamento * 0.15;
+		}
+		else {
+			imposto = faturamento * 0.25;
+		}
+		return imposto;
 		
 		
-		throw new UnsupportedOperationException("Logica ainda não implementada");
+//		throw new UnsupportedOperationException("Logica ainda nï¿½o implementada");
 		
 		
 	}
@@ -54,6 +56,13 @@ public class PessoaJuridica extends Contribuinte {
 
 	public void setFaturamento(double faturamento) {
 		this.faturamento = faturamento;
+	}
+
+
+	@Override
+	public boolean validaSenha(int valor) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 	

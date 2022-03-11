@@ -40,7 +40,7 @@ public class FabricaDeFuncionario {
 			}
 		} 
 		catch(NumberFormatException ex) {
-			throw new DadosInvalidosException("Erro ao converter informações do funcionario");
+			throw new DadosInvalidosException("Erro ao converter informacoes do funcionario");
 		}
 		catch(ArrayIndexOutOfBoundsException ex) {
 			throw new EstruturaDeFuncionarioInvalida("Dados incompletos para o funcionario");
